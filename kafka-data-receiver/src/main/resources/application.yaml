@@ -1,13 +1,15 @@
 server:
-  port: 8081
+  port: 8080
 spring:
+  application:
+    name: kafka-data-receiver
   kafka:
     consumer:
       bootstrap-servers: localhost:9092
       group-id: barisdere1
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-    producer:
-      bootstrap-servers: localhost:9092
-      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      enable-auto-commit: true
+
+
+ 
