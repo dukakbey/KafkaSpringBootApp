@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-KafkaDataSenderApplication<kafka-data-sender>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "org.sceylan.kafka_data_sender.KafkaDataSenderApplication",
+            "projectName": "kafka-data-sender",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
