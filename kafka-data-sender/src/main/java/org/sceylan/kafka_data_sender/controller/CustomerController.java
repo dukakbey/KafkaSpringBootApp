@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @RequestMapping("/customer")
 public class CustomerController {
     @Autowired
-    KafkaService kafkaService;
+    private KafkaService kafkaService;
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE,produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.CREATED)
