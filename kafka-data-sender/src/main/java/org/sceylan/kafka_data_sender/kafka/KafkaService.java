@@ -1,17 +1,29 @@
 package org.sceylan.kafka_data_sender.kafka;
-
-import org.apache.kafka.clients.producer.KafkaProducer;
-import org.apache.kafka.clients.producer.ProducerRecord;
+import org.sceylan.kafka_data_sender.bean.Customer;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Service
 public class KafkaService {
-    private KafkaProducer<String,Object> kafkaProducer = new KafkaProducer<>(KafkaProducerConfig.getConfig());
-    public void sendData(Object o)
+    @Autowired
+    private KafkaTemplate<String,String> kafkaProducer;
+    public void sendData(Customer o)
     {
-        //public ProducerRecord(String topic, K key, V value)
-        ProducerRecord<String,Object> producerRecord = new ProducerRecord<>(null, o);
-        kafkaProducer.send(producerRecord);
+        try {
+            //public ProducerRecord(String topic, K key, V value)
+            String json = new ObjectMapper().writeValueAsString(o);        
+            kafkaProducer.send("customer_data",o.getFirstName(),json);
+            System.out.println("message sent");
+            
+        } catch (JsonProcessingException e) {
+            // TODO: handle exception
+            System.out.println("Error: when sending kafka message" + e.getMessage());
+        }
+        
     }
 
 }

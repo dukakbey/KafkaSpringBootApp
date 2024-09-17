@@ -20,5 +20,6 @@ public class Customer {
     private String lastName;
 
     private Long timestamp;
+    @NotBlank
     private String metaInformation;
 }
