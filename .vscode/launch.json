@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SpringKafkaStreamsApplication",
+            "request": "launch",
+            "mainClass": "org.sceylan.spring_kafka_streams.SpringKafkaStreamsApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "KafkaDataReceiverApplication",
             "request": "launch",
             "mainClass": "org.sceylan.kafka_data_receiver.KafkaDataReceiverApplication",

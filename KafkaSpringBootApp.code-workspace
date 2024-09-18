@@ -1,6 +1,11 @@
 {
 	"folders": [
 		{
+			"name": "spring-kafka-streams",
+			"path": "../spring-kafka-streams"
+		},
+		{
+			"name": "KafkaSpringBootApp",
 			"path": "."
 		}
 	],
