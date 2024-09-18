@@ -9,7 +9,7 @@ public class KafkaConsumerService {
     @KafkaListener(topics = "customer_data")
     public static void receiveData(String m)
     {
-        System.out.println("Received Message: " + m);
+        System.out.println("Received Messagee: " + m);
     }
     @KafkaListener(topics = "updated_data")
     public static void receiveUptdatedData(String m)
