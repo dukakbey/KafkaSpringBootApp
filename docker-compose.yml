@@ -64,3 +64,14 @@ services:
       - kafka-1
     ports:
       - 8080:8080
+  
+  spring-kafka-streams: 
+    build:       
+      context: ./spring-kafka-streams
+      dockerfile: Dockerfile
+    image: dukakbey/spring-kafka:streamer
+    container_name: "spring-kafka-streams"
+    depends_on:
+      - kafka-1
+    ports:
+      - 9082:9082
