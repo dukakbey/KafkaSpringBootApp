@@ -5,7 +5,7 @@ spring:
     name: kafka-data-receiver
   kafka:
     consumer:
-      bootstrap-servers: localhost:9092
+      bootstrap-servers: kafka-1:9092
       group-id: barisdere1
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer

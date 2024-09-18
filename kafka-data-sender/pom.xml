@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>org.sceylan</groupId>
 	<artifactId>kafka-data-sender</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>kafka-data-sender</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
