@@ -1,0 +1,3 @@
+stream:
+    - başta topic oluşmadığı için stream hata veriyor. Topic oluşturulmalı.
+    

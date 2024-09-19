@@ -6,6 +6,6 @@ RUN mvn clean package -DskipTests
 
 FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
-COPY --from=build app/target/spring-kafka-streams-0.0.1.jar stream
-CMD java -jar stream
-
+RUN apk update && apk add --no-cache libstdc++ 
+COPY --from=build /app/target/spring-kafka-streams-0.0.1.jar stream
+CMD ["java", "-jar", "stream"]

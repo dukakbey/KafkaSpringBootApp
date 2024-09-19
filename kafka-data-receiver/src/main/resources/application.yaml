@@ -8,7 +8,7 @@ spring:
       bootstrap-servers: kafka-1:9092
       group-id: barisdere1
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.LongDeserializer
       enable-auto-commit: true
 
 
